@@ -12,16 +12,16 @@ RUN cd /usr/local && \
     chmod +x /usr/local/filebeat/filebeat && \
     mkdir -p /etc/filebeat
 
-ENV PATHS /var/log/yum.log
-ENV ES_SERVER 172.23.5.255:9200
-ENV INDEX filebeat-test
-ENV INPUT_TYPE log
-ENV ES_USERNAME elastic
-ENV ES_PASSWORD changeme
+###ENV PATHS /var/log/yum.log
+###ENV ES_SERVER 172.23.5.255:9200
+###ENV INDEX filebeat-test
+###ENV INPUT_TYPE log
+###ENV ES_USERNAME elastic
+###ENV ES_PASSWORD changeme
 
-ADD ./filebeat.yml /etc/filebeat/
-ADD ./docker-entrypoint.sh /usr/bin/
+###ADD ./filebeat.yml /etc/filebeat/
+###ADD ./docker-entrypoint.sh /usr/bin/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+###ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["/usr/local/filebeat/filebeat","-e","-c","/etc/filebeat/filebeat.yml"]

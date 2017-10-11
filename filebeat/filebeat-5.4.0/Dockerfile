@@ -23,6 +23,6 @@ RUN cd /usr/local && \
 ###ADD ./docker-entrypoint.sh /usr/bin/
 
 ###ENTRYPOINT ["docker-entrypoint.sh"]
-### 生成的镜像 scheng1/filebeat:5.4.1
+#生成的镜像 scheng1/filebeat:5.4.1
 
 CMD ["/usr/local/filebeat/filebeat","-e","-c","/etc/filebeat/filebeat.yml"]
